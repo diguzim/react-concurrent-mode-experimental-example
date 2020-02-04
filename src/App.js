@@ -13,7 +13,7 @@ export function LoadingComponent() {
 function App() {
   return (
     <div className="App">
-      <FetchThenRenderParallel />
+      <RenderAsYouFetch />
     </div>
   );
 }

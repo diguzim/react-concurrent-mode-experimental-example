@@ -45,6 +45,14 @@ export function fetchProfileDataPromiseAll() {
   })
 }
 
+export function fetchNumberOfLikes(posts) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(42);
+    }, 2000);
+  })
+}
+
 // Suspense integrations like Relay implement
 // a contract like this to integrate with React.
 // Real implementations can be significantly more complex.

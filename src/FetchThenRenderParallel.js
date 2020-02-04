@@ -18,7 +18,7 @@ export default function ProfilePage() {
   }
   return (
     <>
-      <ProfileDetails name={user.name} /> {/* Luckly this doesn't break due to the return aboe */}
+      <ProfileDetails name={user.name} /> {/* Luckly this doesn't break due to the return above */}
       <ProfileTimeline posts={posts} />
     </>
   );

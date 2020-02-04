@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchUser, fetchPosts } from './fakeApi';
+import { fetchUser, fetchPosts, fetchNumberOfLikes } from './fakeApi';
 
 export default function ProfilePage() {
   const [user, setUser] = useState(null);
@@ -19,7 +19,7 @@ export default function ProfilePage() {
   return (
     <>
       <div style={{ display: 'flex', flexDirection: 'row' }}>
-        <h1>{user.name}</h1>
+        <ProfileDetails name={user.name} />
         <Likes posts={posts} />
       </div>
       <ProfileTimeline posts={posts} />
@@ -27,18 +27,13 @@ export default function ProfilePage() {
   );
 }
 
+// In this example to get the likes you need first to have the posts
 function Likes({ posts }) {
   const [likes, setLikes] = useState(null);
 
   useEffect(() => {
     if (!posts) return;
-
-    setTimeout(
-      () => {
-        setLikes(12);
-      },
-      [1000]
-    )
+    fetchNumberOfLikes(posts).then(l => setLikes(l))
   }, [posts]);
 
   if (!likes) return <p>(...)</p>;
@@ -46,7 +41,6 @@ function Likes({ posts }) {
   return <p>({likes})</p>;
 }
 
-// The child doesn't trigger fetching anymore
 function ProfileTimeline({ posts }) {
   if (posts === null) {
     return <h2>Loading posts...</h2>;
@@ -58,4 +52,8 @@ function ProfileTimeline({ posts }) {
       ))}
     </ul>
   );
+}
+
+function ProfileDetails({name}) {
+  return <h1>{name}</h1>;
 }
