@@ -232,3 +232,52 @@ export function fetchProfileDataWithError() {
     posts: wrapPromise(postsPromise)
   };
 }
+
+let ringoPosts = [
+  {
+    id: 0,
+    text:
+      "I get by with a little help from my friends"
+  },
+  {
+    id: 1,
+    text:
+      "I'd like to be under the sea in an octupus's garden"
+  },
+  {
+    id: 2,
+    text: "You got that sand all over your feet"
+  }
+];
+
+// Simulate new posts being added over time
+let i = 3;
+setInterval(() => {
+  ringoPosts = [
+    {
+      id: i++,
+      text: "My new post #" + i
+    },
+    ...ringoPosts
+  ];
+}, 3000);
+
+export function fetchProfileDataTransition() {
+  let userPromise = fetchUser();
+  let postsPromise = fetchPostsTransition();
+  return {
+    user: wrapPromise(userPromise),
+    posts: wrapPromise(postsPromise)
+  };
+}
+
+function fetchPostsTransition() {
+  let ringoPostsAtTheTime = ringoPosts;
+  console.log("fetch posts...");
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("fetched posts");
+      resolve(ringoPostsAtTheTime);
+    }, 2000);
+  });
+}

@@ -9,12 +9,14 @@ import RaceConditionWithUseEffect from './RaceConditionWithUseEffect';
 import HandlingErrors from './HandlingErrors';
 import StartTransition from './StartTransition';
 import StartTransitionWithIsPending from './StartTransitionWithIsPending';
+import RefreshWithoutTransition from './RefreshWithoutTransition';
+import RefreshWithTransition from './RefreshWithTransition';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <StartTransitionWithIsPending />
+      <RefreshWithTransition />
     </div>
   );
 }
