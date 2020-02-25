@@ -11,12 +11,13 @@ import StartTransition from './StartTransition';
 import StartTransitionWithIsPending from './StartTransitionWithIsPending';
 import RefreshWithoutTransition from './RefreshWithoutTransition';
 import RefreshWithTransition from './RefreshWithTransition';
+import ButtonWithTransition from './ButtonWithTransition';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <RefreshWithTransition />
+      <ButtonWithTransition />
     </div>
   );
 }
