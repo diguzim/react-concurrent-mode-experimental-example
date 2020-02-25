@@ -7,12 +7,14 @@ import RenderAsYouFetch from './RenderAsYouFetch';
 import RenderAsYouFetchBasedOnProps from './RenderAsYouFetchBasedOnProps';
 import RaceConditionWithUseEffect from './RaceConditionWithUseEffect';
 import HandlingErrors from './HandlingErrors';
+import StartTransition from './StartTransition';
+import StartTransitionWithIsPending from './StartTransitionWithIsPending';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <HandlingErrors />
+      <StartTransitionWithIsPending />
     </div>
   );
 }
