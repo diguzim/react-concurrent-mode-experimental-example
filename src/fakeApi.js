@@ -221,3 +221,14 @@ export function fetchPostsFromUser(userId) {
     }, 2000 * Math.random());
   });
 }
+
+export function fetchProfileDataWithError() {
+  let userPromise = fetchUser();
+  let postsPromise = Promise.reject(
+    "Cannot fetch posts"
+  );
+  return {
+    user: wrapPromise(userPromise),
+    posts: wrapPromise(postsPromise)
+  };
+}
