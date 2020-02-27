@@ -12,12 +12,14 @@ import StartTransitionWithIsPending from './StartTransitionWithIsPending';
 import RefreshWithoutTransition from './RefreshWithoutTransition';
 import RefreshWithTransition from './RefreshWithTransition';
 import ButtonWithTransition from './ButtonWithTransition';
+import RecededSkeletonComplete from './RecededSkeletonComplete';
+import PendingSkeletonComplete from './PendingSkeletonComplete';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <ButtonWithTransition />
+      <PendingSkeletonComplete />
     </div>
   );
 }
