@@ -218,7 +218,7 @@ export function fetchPostsFromUser(userId) {
         default:
           throw Error("Unknown user.");
       }
-    }, 2000 * Math.random());
+    }, 3000 * Math.random());
   });
 }
 
