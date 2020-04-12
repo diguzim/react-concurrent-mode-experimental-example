@@ -22,18 +22,7 @@ function Button({ children, onClick }) {
     });
   }
 
-  const spinner = (
-    <span
-      className="fa fa-circle-o-notch fa-spin"
-      style={{
-        marginLeft: 4,
-        fontSize: "small",
-        visibility: isPending
-          ? "visible"
-          : "hidden"
-      }}
-    />
-  );
+  const spinner = "\"Spinner\"";
 
   return (
     <>
