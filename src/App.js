@@ -15,13 +15,14 @@ import React from 'react';
 // import RecededSkeletonComplete from './RecededSkeletonComplete';
 // import PendingSkeletonComplete from './PendingSkeletonComplete';
 // import LazyFeature from './LazyFeature';
-import LazyFeatureWrappedOnSuspense from './LazyFeatureWrappedOnSuspense';
+// import LazyFeatureWrappedOnSuspense from './LazyFeatureWrappedOnSuspense';
+import RevealTrain from './RevealTrain';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <LazyFeatureWrappedOnSuspense />
+      <RevealTrain />
     </div>
   );
 }
