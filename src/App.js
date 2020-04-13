@@ -11,15 +11,16 @@ import React from 'react';
 // import StartTransitionWithIsPending from './StartTransitionWithIsPending';
 // import RefreshWithoutTransition from './RefreshWithoutTransition';
 // import RefreshWithTransition from './RefreshWithTransition';
-import ButtonWithTransition from './ButtonWithTransition';
+// import ButtonWithTransition from './ButtonWithTransition';
 // import RecededSkeletonComplete from './RecededSkeletonComplete';
 // import PendingSkeletonComplete from './PendingSkeletonComplete';
+import LazyFeature from './LazyFeature';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <ButtonWithTransition />
+      <LazyFeature />
     </div>
   );
 }
