@@ -1,0 +1,11 @@
+.DelayedSpinner {
+  animation: 0s linear 0.5s forwards makeVisible;
+  visibility: hidden;
+  display: inline;
+}
+
+@keyframes makeVisible {
+  to {
+    visibility: visible;
+  }
+}

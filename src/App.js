@@ -16,13 +16,14 @@ import React from 'react';
 // import PendingSkeletonComplete from './PendingSkeletonComplete';
 // import LazyFeature from './LazyFeature';
 // import LazyFeatureWrappedOnSuspense from './LazyFeatureWrappedOnSuspense';
-import RevealTrain from './RevealTrain';
+// import RevealTrain from './RevealTrain';
+import DelayingPendingIndicator from './DelayingPendingIndicator';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <RevealTrain />
+      <DelayingPendingIndicator />
     </div>
   );
 }
