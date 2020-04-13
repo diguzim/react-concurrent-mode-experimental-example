@@ -1,8 +1,8 @@
 import React, { useState, Suspense } from "react";
 
-import { fetchProfileData } from "./fakeApi";
+import { fetchProfileDataTransition } from "./fakeApi";
 
-const initialResource = fetchProfileData();
+const initialResource = fetchProfileDataTransition();
 
 export default function App() {
   const [tab, setTab] = useState("home");
@@ -11,7 +11,7 @@ export default function App() {
   );
 
   function showProfile() {
-    setResource(fetchProfileData());
+    setResource(fetchProfileDataTransition());
     setTab("profile");
   }
 
