@@ -4,9 +4,9 @@ import React, {
   Suspense
 } from "react";
 
-import { fetchProfileData } from "./fakeApi";
+import { fetchProfileDataTransition } from "./fakeApi";
 
-const initialResource = fetchProfileData(0);
+const initialResource = fetchProfileDataTransition();
 
 export default function App() {
   const [tab, setTab] = useState("home");
@@ -14,8 +14,8 @@ export default function App() {
     initialResource
   );
 
-  function showProfile(id) {
-    setResource(fetchProfileData(id));
+  function showProfile() {
+    setResource(fetchProfileDataTransition());
     setTab("profile");
   }
 
@@ -96,18 +96,7 @@ function Button({ children, onClick }) {
     });
   }
 
-  const spinner = (
-    <span
-      className="fa fa-circle-o-notch fa-spin"
-      style={{
-        marginLeft: 4,
-        fontSize: "small",
-        visibility: isPending
-          ? "visible"
-          : "hidden"
-      }}
-    />
-  );
+  const spinner = "\"Some Spinner\"";
 
   return (
     <>
