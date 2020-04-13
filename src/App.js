@@ -14,13 +14,14 @@ import React from 'react';
 // import ButtonWithTransition from './ButtonWithTransition';
 // import RecededSkeletonComplete from './RecededSkeletonComplete';
 // import PendingSkeletonComplete from './PendingSkeletonComplete';
-import LazyFeature from './LazyFeature';
+// import LazyFeature from './LazyFeature';
+import LazyFeatureWrappedOnSuspense from './LazyFeatureWrappedOnSuspense';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <LazyFeature />
+      <LazyFeatureWrappedOnSuspense />
     </div>
   );
 }
