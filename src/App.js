@@ -17,13 +17,16 @@ import React from 'react';
 // import LazyFeature from './LazyFeature';
 // import LazyFeatureWrappedOnSuspense from './LazyFeatureWrappedOnSuspense';
 // import RevealTrain from './RevealTrain';
-import DelayingPendingIndicator from './DelayingPendingIndicator';
+// import DelayingPendingIndicator from './DelayingPendingIndicator';
+// import TranslationBasic from './TranslationBasic';
+// import TranslationProblematic from './TranslationProblematic';
+import TranslationElegant from './TranslationElegant';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <DelayingPendingIndicator />
+      <TranslationElegant />
     </div>
   );
 }

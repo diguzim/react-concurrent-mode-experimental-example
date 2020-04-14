@@ -1,3 +1,5 @@
+import YT from "yandex-translate";
+
 export function fetchUser() {
   console.log("fetch user...");
   return new Promise(resolve => {
@@ -376,4 +378,29 @@ export function fetchProfileDataSimilarTimes() {
     posts: wrapPromise(postsPromise),
     trivia: wrapPromise(triviaPromise)
   };
+}
+
+const { translate } = YT(
+  "trnsl.1.1.20191024T065420Z.b1864d8992684387.41b0675c02ee20c3e71c53077224b1bfdaea19bd"
+);
+
+export function fetchTranslation(text) {
+  const promise = new Promise(
+    (resolve, reject) => {
+      translate(
+        text,
+        {
+          to: "fr"
+        },
+        (err, res) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(res.text);
+          }
+        }
+      );
+    }
+  );
+  return wrapPromise(promise);
 }
