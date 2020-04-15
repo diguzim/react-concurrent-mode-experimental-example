@@ -24,13 +24,16 @@ import React from 'react';
 // import SlowProfileSwitcher from './SlowProfileSwitcher';
 // import FastProfileSwitcher from './FastProfileSwitcher';
 // import SlowListWithoutConcurrentMode from './SlowListWithoutConcurrentMode';
-import SlowListWithConcurrentMode from './SlowListWithConcurrentMode';
+// import SlowListWithConcurrentMode from './SlowListWithConcurrentMode';
+// import WithoutSuspenseList from './WithoutSuspenseList';
+// import WithoutSuspenseListSuspendedTogether from './WithoutSuspenseListSuspendedTogether';
+import WithSuspenseList from './WithSuspenseList';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <SlowListWithConcurrentMode />
+      <WithSuspenseList />
     </div>
   );
 }

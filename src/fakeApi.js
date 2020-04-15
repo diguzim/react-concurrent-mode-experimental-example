@@ -404,3 +404,38 @@ export function fetchTranslation(text) {
   );
   return wrapPromise(promise);
 }
+
+function fetchTriviaRandomTime() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve([
+        {
+          id: 1,
+          text:
+            'The nickname "Ringo" came from his habit of wearing numerous rings.'
+        },
+        {
+          id: 2,
+          text:
+            "Plays the drums left-handed with a right-handed drum set."
+        },
+        {
+          id: 3,
+          text:
+            "Nominated for one Daytime Emmy Award, but did not win"
+        }
+      ]);
+    }, 5000 * Math.random());
+  });
+}
+
+export function fetchProfileDataWithTriviaRandomTime() {
+  let userPromise = fetchUser();
+  let postsPromise = fetchPosts();
+  let triviaPromise = fetchTriviaRandomTime();
+  return {
+    user: wrapPromise(userPromise),
+    posts: wrapPromise(postsPromise),
+    trivia: wrapPromise(triviaPromise)
+  };
+}
