@@ -20,13 +20,15 @@ import React from 'react';
 // import DelayingPendingIndicator from './DelayingPendingIndicator';
 // import TranslationBasic from './TranslationBasic';
 // import TranslationProblematic from './TranslationProblematic';
-import TranslationElegant from './TranslationElegant';
+// import TranslationElegant from './TranslationElegant';
+// import SlowProfileSwitcher from './SlowProfileSwitcher';
+import FastProfileSwitcher from './FastProfileSwitcher';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <TranslationElegant />
+      <FastProfileSwitcher />
     </div>
   );
 }
