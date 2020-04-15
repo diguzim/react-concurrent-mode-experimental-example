@@ -22,13 +22,15 @@ import React from 'react';
 // import TranslationProblematic from './TranslationProblematic';
 // import TranslationElegant from './TranslationElegant';
 // import SlowProfileSwitcher from './SlowProfileSwitcher';
-import FastProfileSwitcher from './FastProfileSwitcher';
+// import FastProfileSwitcher from './FastProfileSwitcher';
+// import SlowListWithoutConcurrentMode from './SlowListWithoutConcurrentMode';
+import SlowListWithConcurrentMode from './SlowListWithConcurrentMode';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <FastProfileSwitcher />
+      <SlowListWithConcurrentMode />
     </div>
   );
 }
