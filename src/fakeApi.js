@@ -280,13 +280,15 @@ function fetchPostsTransition() {
     setTimeout(() => {
       console.log("fetched posts");
       resolve(ringoPostsAtTheTime);
-    }, 2000);
+    }, 5000 * Math.random());
   });
 }
 
 function fetchTrivia() {
+  console.log("fetching trivia...")
   return new Promise(resolve => {
     setTimeout(() => {
+      console.log("fetched trivia")
       resolve([
         {
           id: 1,
@@ -304,13 +306,13 @@ function fetchTrivia() {
             "Nominated for one Daytime Emmy Award, but did not win"
         }
       ]);
-    }, 5000);
+    }, 7000);
   });
 }
 
 export function fetchProfileDataWithTrivia() {
   let userPromise = fetchUser();
-  let postsPromise = fetchPosts();
+  let postsPromise = fetchPostsTransition();
   let triviaPromise = fetchTrivia();
   return {
     user: wrapPromise(userPromise),
@@ -346,7 +348,9 @@ export function fetchPosts1300() {
 }
 
 function fetchTrivia1400() {
+  console.log('fetching trivia...')
   return new Promise(resolve => {
+    console.log('fetched trivia')
     setTimeout(() => {
       resolve([
         {
@@ -406,8 +410,10 @@ export function fetchTranslation(text) {
 }
 
 function fetchTriviaRandomTime() {
+  console.log("fetching trivia...")
   return new Promise(resolve => {
     setTimeout(() => {
+      console.log("fetched trivia")
       resolve([
         {
           id: 1,

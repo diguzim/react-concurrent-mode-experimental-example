@@ -13,7 +13,7 @@ function Button({ children, onClick }) {
     startTransition,
     isPending
   ] = useTransition({
-    timeoutMs: 10000
+    timeoutMs: 3000
   });
 
   function handleClick() {

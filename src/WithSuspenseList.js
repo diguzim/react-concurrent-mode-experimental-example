@@ -14,7 +14,7 @@ export default function() {
 
 function ProfilePage({ resource }) {
   return (
-    <SuspenseList revealOrder="forwards" /* tail="collapsed" */>
+    <SuspenseList revealOrder="forwards" /* tail="hidden" */>
       <ProfileDetails resource={resource} />
       <Suspense
         fallback={<h2>Loading posts...</h2>}

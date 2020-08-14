@@ -13,8 +13,8 @@ export default function ProfilePage() {
     startTransition,
     isPending
   ] = useTransition({
-    // Wait 10 seconds before fallback
-    timeoutMs: 10000
+    // Wait 3 seconds before fallback
+    timeoutMs: 3000
   });
   const [resource, setResource] = useState(
     initialResource

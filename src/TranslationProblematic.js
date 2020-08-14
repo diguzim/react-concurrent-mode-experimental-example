@@ -23,8 +23,9 @@ export default function () {
 
   function handleChange(e) {
     const value = e.target.value;
+    setQuery(value);
+    
     startTransition(() => {
-      setQuery(value);
       setResource(fetchTranslation(value));
     });
   }

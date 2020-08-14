@@ -78,7 +78,7 @@ function ProfileDetails({ resource }) {
 function ProfileTimeline({ isStale, resource }) {
   const posts = resource.posts.read();
   return (
-    <ul style={{ opacity: isStale ? 0.7 : 1 }}>
+    <ul style={{ opacity: isStale ? 0.4 : 1 }}>
       {posts.map(post => (
         <li key={post.id}>{post.text}</li>
       ))}
